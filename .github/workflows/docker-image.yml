@@ -26,14 +26,6 @@ jobs:
         pwd
         ls -R
 
-    - name: Change working directory
-      run: cd Dvp/Dvp
-
-    - name: Print directory structure inside Dvp/Dvp
-      run: |
-        pwd
-        ls -R
-
     - name: Install dependencies
       run: npm install
 
