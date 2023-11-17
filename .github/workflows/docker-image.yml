@@ -9,11 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
+  
     - name: Checkout code
       uses: actions/checkout@v2
       with:
         submodules: 'recursive'
         ref: 'main'
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
@@ -31,4 +34,3 @@ jobs:
 
     - name: Push Docker image to Docker Hub
       run: docker push hajargouchgache/first-image
-
