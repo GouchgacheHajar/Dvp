@@ -21,10 +21,10 @@ jobs:
         ref: 'main'
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Print current working directory
+    - name: Print directory structure
       run: |
         pwd
-        ls
+        ls -R
 
     - name: Change working directory
       run: cd Dvp/Dvp
