@@ -26,6 +26,9 @@ jobs:
         pwd
         ls
 
+    - name: Change working directory
+      run: cd Dvp/Dvp
+
     - name: Install dependencies
       run: npm install
 
