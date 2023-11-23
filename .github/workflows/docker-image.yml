@@ -32,7 +32,7 @@ jobs:
         ECR_REPOSITORY: gitcicdimage
         IMAGE_TAG: ${{ github.sha}}
       run: |
-        docker build -t $ECR_REPOSITORY:$IMAGE_TAG -t $ECR_REGISTRY/ECR_REPOSITORY:LATEST .
+        docker build -t $ECR_REPOSITORY:$IMAGE_TAG -t $ECR_REGISTRY/ECR_REPOSITORY:latest .
         docker push -a $ECR_REGISTRY/ECR_REPOSITORY
     
 
