@@ -1,15 +1,14 @@
-FROM node:18-alpine AS builde
+#FROM node:18-alpine AS builde
 WORKDIR /app
 FROM node:19.6.0 AS build
 
 #RUN npm --version
 WORKDIR /app
-COPY package*.json ./
-RUN npm install --verbose
-#RUN npm install
-COPY . .
+COPY test/app/package*.json ./
+RUN npm install
+COPY test/app/ .
 EXPOSE 3000
-#RUN npm run build --prod
+RUN npm run build --prod
 
 # Stage 2: Setup Nginx to serve Angular application
 FROM nginx:1.23.4
