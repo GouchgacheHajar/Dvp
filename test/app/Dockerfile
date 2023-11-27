@@ -2,6 +2,7 @@ FROM node:18-alpine AS builde
 WORKDIR /app
 FROM node:19.6.0 AS build
 
+RUN npm --version
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
