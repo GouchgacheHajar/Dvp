@@ -9,7 +9,7 @@ RUN npm install --verbose
 #RUN npm install
 COPY . .
 EXPOSE 3000
-@RUN npm run build --prod
+#RUN npm run build --prod
 
 # Stage 2: Setup Nginx to serve Angular application
 FROM nginx:1.23.4
